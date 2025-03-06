@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=4 uid="uid://cmjnp5siqqmy8"]
+
+[ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1_c45k0"]
+[ext_resource type="Texture2D" uid="uid://cluh2ekc38ktx" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_dirt.png" id="2_puaw3"]
+[ext_resource type="PackedScene" uid="uid://co5bqmi346nni" path="res://scenes/LoseScene.tscn" id="3_6hnbi"]
+[ext_resource type="Texture2D" uid="uid://bfpt4n245ef1h" path="res://assets/kenney_platformerpack/PNG/Items/star.png" id="3_deypu"]
+[ext_resource type="Script" path="res://scenes/LoseSceneLevel2.gd" id="4_e4pn5"]
+[ext_resource type="PackedScene" uid="uid://bk7pf0yfo08xy" path="res://scenes/EndScene.tscn" id="4_mf7ws"]
+[ext_resource type="Script" path="res://scenes/EndSceneLevel2.gd" id="5_4jrrr"]
+[ext_resource type="PackedScene" uid="uid://dum3vfu3wwp7c" path="res://scenes/Bee.tscn" id="8_1e1y1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i0jde"]
+texture = ExtResource("2_puaw3")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(-0.155, 0)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, -64, -64, -64, -64, -17, -58.25, 4, -40.25, 29, -13.75, 47.5, 18.75, 57, 64, 64)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, -17, 58.25, 4, 40.25, 29, 13.75, 47.5, -18.75, 57, -64, 64)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, -20)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, -64, -64, -64, -64, 64, 64, -20)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(-0.155, 0)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 10.5, -64, 10.5)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 10.5, -64, 10.5)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 10.5, -64, 10.5)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 10.5, -64, 10.5)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, 64, 64, 64, -64, 64)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(64, -64, -64, 64, -64, 64, 64, 64)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_aly4v"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_i0jde")
+
+[node name="Level2" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_c45k0")]
+position = Vector2(445, 209)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Platform" type="TileMapLayer" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAAFAAUAAQABAAAAAAAGAAUAAQABAAAAAAAHAAUAAQABAAAAAAAIAAUAAQABAAAAAAAGAAQAAQAHAAEAAAAIAAcAAQABAAAAAAAIAAYAAQABAAAAAAAHAAYAAQABAAAAAAAHAAcAAQABAAAAAAAGAAcAAQABAAAAAAAGAAYAAQABAAAAAAAFAAYAAQABAAAAAAAFAAcAAQABAAAAAAAEAAcAAQABAAAAAAAEAAYAAQABAAAAAAAEAAUAAQABAAAAAAAHAAQAAQAHAAEAAAAIAAQAAQAHAAEAAAAEAAQAAQABAAAAAAAFAAQAAQABAAAAAAAFAAMAAQABAAAAAAAEAAMAAQABAAAAAAAFAAIAAQABAAAAAAAEAAIAAQABAAAAAAAEAAEAAQABAAAAAAAFAAEAAQABAAAAAAAEAAAAAQABAAAAAAAFAAAAAQABAAAAAAAEAP7/AQABAAAAAAAFAP7/AQABAAAAAAAFAP//AQABAAAAAAAEAP//AQABAAAAAAADAP//AQABAAAAAAADAAAAAQABAAAAAAADAAEAAQABAAAAAAADAAIAAQABAAAAAAADAAMAAQABAAAAAAADAAQAAQABAAAAAAADAAUAAQABAAAAAAADAAYAAQABAAAAAAADAAcAAQABAAAAAAACAAcAAQABAAAAAAACAAYAAQABAAAAAAACAAUAAQABAAAAAAACAAQAAQABAAAAAAACAAMAAQABAAAAAAACAAIAAQABAAAAAAACAAEAAQABAAAAAAACAAAAAQABAAAAAAACAP//AQABAAAAAAACAP7/AQABAAAAAAADAP7/AQABAAAAAAABAP7/AQABAAAAAAABAP//AQABAAAAAAABAAAAAQABAAAAAAABAAEAAQABAAAAAAABAAIAAQABAAAAAAABAAMAAQABAAAAAAABAAQAAQABAAAAAAABAAUAAQABAAAAAAABAAYAAQABAAAAAAABAAcAAQABAAAAAAAAAAcAAQABAAAAAAD//wcAAQABAAAAAAD+/wcAAQABAAAAAAD9/wcAAQABAAAAAAD9/wYAAQABAAAAAAD9/wUAAQABAAAAAAD9/wQAAQABAAAAAAD9/wMAAQABAAAAAAD9/wIAAQABAAAAAAD9/wEAAQABAAAAAAD9/wAAAQABAAAAAAD9////AQABAAAAAAD9//7/AQABAAAAAAD+//7/AQABAAAAAAD///7/AQABAAAAAAAAAP7/AQABAAAAAAAAAP//AQABAAAAAAAAAAAAAQABAAAAAAAAAAEAAQABAAAAAAAAAAIAAQABAAAAAAAAAAMAAQABAAAAAAAAAAQAAQABAAAAAAAAAAUAAQABAAAAAAAAAAYAAQABAAAAAAD//wYAAQABAAAAAAD+/wYAAQABAAAAAAD+/wUAAQABAAAAAAD+/wQAAQABAAAAAAD+/wMAAQABAAAAAAD+/wIAAQABAAAAAAD+/wEAAQABAAAAAAD+/wAAAQABAAAAAAD+////AQABAAAAAAD/////AQABAAAAAAD//wAAAQABAAAAAAD//wEAAQABAAAAAAD//wIAAQABAAAAAAD//wMAAQABAAAAAAD//wQAAQABAAAAAAD//wUAAQABAAAAAAALAAQAAQADAAAAAAAMAAQAAQAEAAAAAAAPAAMAAQADAAAAAAAQAAMAAQAEAAAAAAASAAcAAQAAAAEAAAAUAAcAAQAAAAEAAAAWAAcAAQAAAAEAAAAZAAYAAQAFAAEAAAAaAAUAAQAFAAEAAAAbAAQAAQAFAAEAAAAcAAQAAQAHAAEAAAAdAAQAAQAHAAEAAAAeAAQAAQAHAAEAAAAfAAQAAQAHAAEAAAAgAAQAAQAHAAEAAAAhAAQAAQAHAAEAAAAZAAcAAQABAAAAAAAZAAgAAQABAAAAAAAaAAgAAQABAAAAAAAbAAgAAQABAAAAAAAcAAgAAQABAAAAAAAdAAgAAQABAAAAAAAeAAgAAQABAAAAAAAfAAgAAQABAAAAAAAgAAgAAQABAAAAAAAhAAgAAQABAAAAAAAhAAcAAQABAAAAAAAhAAYAAQABAAAAAAAhAAUAAQABAAAAAAAgAAUAAQABAAAAAAAfAAUAAQABAAAAAAAeAAUAAQABAAAAAAAdAAUAAQABAAAAAAAcAAUAAQABAAAAAAAbAAYAAQABAAAAAAAaAAcAAQABAAAAAAAbAAcAAQABAAAAAAAcAAcAAQABAAAAAAAcAAYAAQABAAAAAAAdAAYAAQABAAAAAAAeAAYAAQABAAAAAAAfAAYAAQABAAAAAAAgAAYAAQABAAAAAAAgAAcAAQABAAAAAAAfAAcAAQABAAAAAAAeAAcAAQABAAAAAAAdAAcAAQABAAAAAAAaAAYAAQAIAAAAAAAbAAUAAQAIAAAAAAA=")
+tile_set = SubResource("TileSet_aly4v")
+
+[node name="Star" type="Sprite2D" parent="."]
+position = Vector2(1864, 215)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_deypu")
+
+[node name="WinTrigger" parent="Star" instance=ExtResource("4_mf7ws")]
+position = Vector2(0, 4)
+scale = Vector2(2, 2)
+script = ExtResource("5_4jrrr")
+sceneName = "WinScreen"
+
+[node name="LoseTrigger" parent="." instance=ExtResource("3_6hnbi")]
+position = Vector2(1000, 593)
+scale = Vector2(103.776, -2.87913)
+script = ExtResource("4_e4pn5")
+sceneName = "Level2"
+
+[node name="Bee" parent="." instance=ExtResource("8_1e1y1")]
+position = Vector2(1043, 417)

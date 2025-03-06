@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dum3vfu3wwp7c"]
+
+[ext_resource type="Texture2D" uid="uid://cmlt5c4ma3gsq" path="res://assets/kenney_platformerpack/PNG/Enemies/bee.png" id="1_6oerh"]
+[ext_resource type="Script" path="res://scenes/Bee.gd" id="1_apefa"]
+[ext_resource type="PackedScene" uid="uid://co5bqmi346nni" path="res://scenes/LoseScene.tscn" id="2_2dki5"]
+[ext_resource type="Script" path="res://scenes/LoseSceneLevel2.gd" id="4_um7jv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0nby"]
+
+[node name="Bee" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_apefa")
+speed = 250.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_6oerh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.26438, 1.20874)
+shape = SubResource("RectangleShape2D_s0nby")
+
+[node name="Area2D" parent="." instance=ExtResource("2_2dki5")]
+scale = Vector2(1.56, 1.44)
+script = ExtResource("4_um7jv")
+sceneName = "Level2"
