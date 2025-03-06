@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dbg35ghk32nka" path="res://scenes/objects/Fish.tscn" id="6_g25wh"]
 [ext_resource type="Script" path="res://scenes/scripts/Spawner.gd" id="7_gjaj1"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rqy3a"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lcr0a"]
 texture = ExtResource("2_gyy1b")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
@@ -53,7 +53,7 @@ texture_region_size = Vector2i(128, 128)
 [sub_resource type="TileSet" id="TileSet_c0ado"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_rqy3a")
+sources/1 = SubResource("TileSetAtlasSource_lcr0a")
 
 [node name="Level1" type="Node2D"]
 
