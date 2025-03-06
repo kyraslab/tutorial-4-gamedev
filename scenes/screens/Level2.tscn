@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1_c45k0"]
 [ext_resource type="Texture2D" uid="uid://cluh2ekc38ktx" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_dirt.png" id="2_puaw3"]
-[ext_resource type="PackedScene" uid="uid://co5bqmi346nni" path="res://scenes/LoseScene.tscn" id="3_6hnbi"]
+[ext_resource type="PackedScene" uid="uid://co5bqmi346nni" path="res://scenes/screens/LoseScene.tscn" id="3_6hnbi"]
 [ext_resource type="Texture2D" uid="uid://bfpt4n245ef1h" path="res://assets/kenney_platformerpack/PNG/Items/star.png" id="3_deypu"]
-[ext_resource type="Script" path="res://scenes/LoseSceneLevel2.gd" id="4_e4pn5"]
+[ext_resource type="Script" path="res://scenes/scripts/LoseSceneLevel2.gd" id="4_e4pn5"]
 [ext_resource type="PackedScene" uid="uid://bk7pf0yfo08xy" path="res://scenes/EndScene.tscn" id="4_mf7ws"]
-[ext_resource type="Script" path="res://scenes/EndSceneLevel2.gd" id="5_4jrrr"]
+[ext_resource type="Script" path="res://scenes/scripts/EndSceneLevel2.gd" id="5_4jrrr"]
 [ext_resource type="PackedScene" uid="uid://dum3vfu3wwp7c" path="res://scenes/Bee.tscn" id="8_1e1y1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i0jde"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://co5bqmi346nni"]
 
-[ext_resource type="Script" path="res://scenes/LoseScene.gd" id="1_26pv1"]
+[ext_resource type="Script" path="res://scenes/scripts/LoseScene.gd" id="1_26pv1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y8pnm"]
 
